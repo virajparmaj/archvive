@@ -1,13 +1,12 @@
 """Recover the discovered legacy sample before the broader yearly survey."""
 
 import json
-import re
 from datetime import datetime, timezone
 from pathlib import Path
 
 from phase0 import (
     Collector, DATA, archive_evidence, atomic_json, cdx_rows, copies, digest,
-    export, extract, is_detail, now, record,
+    export, extract, is_detail, record,
 )
 
 

@@ -89,4 +89,9 @@ def validate(root):
 
 
 if __name__ == "__main__":
-    print(json.dumps(validate(Path(__file__).parent), indent=2))
+    target = Path(__file__).parent
+    if not (target / "manifest.json").exists():
+        fallback = Path(__file__).resolve().parents[1] / "data" / "historical-postings-handover"
+        if (fallback / "manifest.json").exists():
+            target = fallback
+    print(json.dumps(validate(target), indent=2))

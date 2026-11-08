@@ -1,6 +1,5 @@
 """Collect the separately linked Canada and UK current inventories."""
 
-import json
 from urllib.parse import urljoin
 
 from phase0 import Collector, DATA, atomic_json, export, extract, now, record, soup

@@ -3,7 +3,6 @@
 import json
 import re
 import subprocess
-from pathlib import Path
 from urllib.parse import urlsplit
 
 from phase0 import (
